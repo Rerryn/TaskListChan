@@ -16,11 +16,9 @@
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %> 
-    <div class="row" id="pwd-container">
-    <div class="col-sm-4">
+    <div id="pwd-container">
         <span class="pwstrength_viewport_verdict"></span>
     </div>
-</div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />

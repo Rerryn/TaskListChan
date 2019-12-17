@@ -10,6 +10,9 @@
       <em>(<%= @minimum_password_length %> characters minimum)</em><br />
     <% end %>
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    <div id="pwd-container">
+        <span class="pwstrength_viewport_verdict"></span>
+    </div>
   </div>
 
   <div class="field">
@@ -21,5 +24,21 @@
     <%= f.submit "Change my password" %>
   </div>
 <% end %>
+<script type='text/javascript'>
+jQuery(document).ready(function () {
+    "use strict";
+    var options = {};
+    options.ui = {
+        container: "#pwd-container",
+        showStatus: true,
+        showProgressBar: false,
+        viewports: {
+            verdict: ".pwstrength_viewport_verdict"
+        }
+    };
+    $('#user_password').pwstrength(options);
+});
+</script>
 
 <%= render "devise/shared/links" %>
+<%= javascript_include_tag "pwstrength" %>
