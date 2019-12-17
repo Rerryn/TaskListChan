@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  note: MyText
+  creation: 2019-12-16
+  modification: 2019-12-16
+  deadline: 2019-12-16
+  category: 1
+  tags: MyString
+
+two:
+  title: MyString
+  note: MyText
+  creation: 2019-12-16
+  modification: 2019-12-16
+  deadline: 2019-12-16
+  category: 1
+  tags: MyString
