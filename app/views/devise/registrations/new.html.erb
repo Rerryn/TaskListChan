@@ -1,3 +1,5 @@
+
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -13,8 +15,16 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <%= f.password_field :password, autocomplete: "new-password" %> 
+    <div class="row" id="pwd-container">
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control border-success" id="password" placeholder="Password">
+        </div>
+        <span class="pwstrength_viewport_verdict"><span class="password-verdict">Very Strong</span></span>
+    </div>
+</div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
@@ -26,4 +36,21 @@
   </div>
 <% end %>
 
+<script type='text/javascript'>
+jQuery(document).ready(function () {
+    "use strict";
+    var options = {};
+    options.ui = {
+        container: "#pwd-container",
+        showStatus: true,
+        showProgressBar: false,
+        viewports: {
+            verdict: ".pwstrength_viewport_verdict"
+        }
+    };
+    $(':password').pwstrength(options);
+});
+</script>
+
 <%= render "devise/shared/links" %>
+<%= javascript_include_tag "pwstrength" %>
