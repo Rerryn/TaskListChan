@@ -18,11 +18,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %> 
     <div class="row" id="pwd-container">
     <div class="col-sm-4">
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control border-success" id="password" placeholder="Password">
-        </div>
-        <span class="pwstrength_viewport_verdict"><span class="password-verdict">Very Strong</span></span>
+        <span class="pwstrength_viewport_verdict"></span>
     </div>
 </div>
 
@@ -48,7 +44,7 @@ jQuery(document).ready(function () {
             verdict: ".pwstrength_viewport_verdict"
         }
     };
-    $(':password').pwstrength(options);
+    $('#user_password').pwstrength(options);
 });
 </script>
 
