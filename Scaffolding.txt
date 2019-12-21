@@ -1,9 +1,9 @@
 rails generate scaffold Tag title:string creation:timestamp modified:timestamp rgb:string user:belongs_to
 rails generate scaffold Category title:string creation:timestamp modified:timestamp rgb:string user:belongs_to
 rails generate scaffold Task title:string creation:timestamp modified:timestamp user:belongs_to tag:belongs_to category:belongs_to
-rails generate scaffold TagAssociation tag:belongs_to task:belongs_to
+# https://www.sitepoint.com/save-multiple-checkbox-values-database-rails/
+rails g migration CreateJoinTableTagTask Tag Task
 
 rails destroy scaffold Tag
 rails destroy scaffold Category
 rails destroy scaffold Task
-rails destroy scaffold TagAssociation

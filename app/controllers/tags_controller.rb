@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
+  has_and_belongs_to_many :tasks
 
   # GET /tags
   # GET /tags.json

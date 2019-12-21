@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  has_and_belongs_to_many :tags
 
   # GET /tasks
   # GET /tasks.json
   def index
     @categories = Category.where(user_id: current_user.id)
-    @tagAssocs = TagAssociation.all
     @tasks = Task.where(user_id: current_user.id)
   end
 
@@ -74,6 +74,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:title, :creation, :modified, :user_id, :tag_id, :category_id)
+      params.require(:task).permit(:title, :creation, :modified, :user_id, :tag_id, :category_id, tag_ids:[])
     end
 end

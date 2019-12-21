@@ -17,11 +17,7 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= category.title %></td>
-        <td><%= category.creation %></td>
-        <td><%= category.modified %></td>
-        <td><%= category.rgb %></td>
-        <td><%= category.user_id %></td>
+        <td style='background:#<%= category.rgb %>'><%= category.title %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
