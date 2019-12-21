@@ -1,0 +1,4 @@
+rails generate scaffold Tag title:string creation:timestamp modified:timestamp rgb:integer user:belongs_to
+rails generate scaffold Category title:string creation:timestamp modified:timestamp rgb:integer user:belongs_to
+rails generate scaffold Task title:string creation:timestamp modified:timestamp user:belongs_to tags:references category:belongs_to
+rails generate scaffold TagAssociation tag:belongs_to task:belongs_to
