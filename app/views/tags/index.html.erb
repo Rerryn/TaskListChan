@@ -6,10 +6,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Creation</th>
-      <th>Modified</th>
-      <th>Rgb</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +13,7 @@
   <tbody>
     <% @tags.each do |tag| %>
       <tr>
-        <td><%= tag.title %></td>
-        <td><%= tag.creation %></td>
-        <td><%= tag.modified %></td>
-        <td><%= tag.rgb %></td>
-        <td><%= tag.user_id %></td>
+        <td style='background:#<%= tag.rgb %>'><%= tag.title %></td>
         <td><%= link_to 'Show', tag %></td>
         <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
         <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>

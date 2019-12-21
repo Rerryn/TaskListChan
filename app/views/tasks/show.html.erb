@@ -16,18 +16,13 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @task.user_id %>
-</p>
-
-<p>
   <strong>Tag:</strong>
   <%= @task.tag_id %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @task.category_id %>
+  <%= @categories.find(@task.category_id).title %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

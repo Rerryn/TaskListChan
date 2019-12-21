@@ -4,21 +4,26 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @categories = Category.where(user_id: current_user.id)
+    @tagAssocs = TagAssociation.all
+    @tasks = Task.where(user_id: current_user.id)
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @categories = Category.where(user_id: current_user.id)
   end
 
   # GET /tasks/new
   def new
+    @catlist = Category.where(user_id: current_user.id).map
     @task = Task.new
   end
 
   # GET /tasks/1/edit
   def edit
+    @catlist = Category.where(user_id: current_user.id).map
   end
 
   # POST /tasks

@@ -15,25 +15,13 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= form.label :creation %>
-    <%= form.datetime_select :creation %>
-  </div>
-
-  <div class="field">
-    <%= form.label :modified %>
-    <%= form.datetime_select :modified %>
-  </div>
+  <%= form.hidden_field :creation, value: Time.now  %>
+  <%= form.hidden_field :modified, value: Time.now  %>
+  <%= form.hidden_field :user_id, value: current_user.id  %>
 
   <div class="field">
     <%= form.label :rgb %>
-    <%= form.number_field :rgb %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :rgb %>
   </div>
 
   <div class="actions">

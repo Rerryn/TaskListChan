@@ -6,10 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Creation</th>
-      <th>Modified</th>
-      <th>User</th>
-      <th>Tag</th>
+      <th>Tags</th>
       <th>Category</th>
       <th colspan="3"></th>
     </tr>
@@ -19,11 +16,8 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
-        <td><%= task.creation %></td>
-        <td><%= task.modified %></td>
-        <td><%= task.user_id %></td>
         <td><%= task.tag_id %></td>
-        <td><%= task.category_id %></td>
+        <td><%= @categories.find(task.category_id).title %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>

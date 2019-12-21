@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :tasks
-  resources :tag_associations
   resources :categories
   resources :tags
+  resources :tasks
+  resources :tag_associations
   devise_for :users
   root to: "tasks#index"
   

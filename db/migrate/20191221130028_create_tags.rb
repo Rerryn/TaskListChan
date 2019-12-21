@@ -4,7 +4,7 @@ class CreateTags < ActiveRecord::Migration[6.0]
       t.string :title
       t.timestamp :creation
       t.timestamp :modified
-      t.integer :rgb
+      t.string :rgb
       t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps

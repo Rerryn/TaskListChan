@@ -16,20 +16,9 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :creation %>
-    <%= form.datetime_select :creation %>
-  </div>
-
-  <div class="field">
-    <%= form.label :modified %>
-    <%= form.datetime_select :modified %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+    <%= form.hidden_field :creation, value: Time.now  %>
+    <%= form.hidden_field :modified, value: Time.now  %>
+    <%= form.hidden_field :user_id, value: current_user.id  %>
 
   <div class="field">
     <%= form.label :tag_id %>
@@ -38,7 +27,8 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+    <% options = options_from_collection_for_select(@catlist , 'id', 'title') %>
+    <%= form.select :category_id, options %>
   </div>
 
   <div class="actions">

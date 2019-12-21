@@ -2,14 +2,14 @@
 
 one:
   title: MyString
-  creation: 2019-12-21 12:23:38
-  modified: 2019-12-21 12:23:38
-  rgb: 1
+  creation: 2019-12-21 13:00:37
+  modified: 2019-12-21 13:00:37
+  rgb: MyString
   user: one
 
 two:
   title: MyString
-  creation: 2019-12-21 12:23:38
-  modified: 2019-12-21 12:23:38
-  rgb: 1
+  creation: 2019-12-21 13:00:37
+  modified: 2019-12-21 13:00:37
+  rgb: MyString
   user: two
