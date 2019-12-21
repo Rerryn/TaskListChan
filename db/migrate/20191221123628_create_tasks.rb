@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.timestamp :creation
       t.timestamp :modified
       t.belongs_to :user, null: false, foreign_key: true
-      t.references :tag, null: false, foreign_key: true
+      t.belongs_to :tag, null: false, foreign_key: true
       t.belongs_to :category, null: false, foreign_key: true
 
       t.timestamps
