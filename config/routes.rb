@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :tasks
-  resources :categories
-  resources :tags
   devise_for :users
   root to: "tasks#index"
   
