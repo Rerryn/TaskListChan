@@ -17,7 +17,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Category", with: @task.category_id
     fill_in "Creation", with: @task.creation
     fill_in "Modified", with: @task.modified
-    fill_in "Tags", with: @task.tags_id
+    fill_in "Tag", with: @task.tag_id
     fill_in "Title", with: @task.title
     fill_in "User", with: @task.user_id
     click_on "Create Task"
@@ -33,7 +33,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Category", with: @task.category_id
     fill_in "Creation", with: @task.creation
     fill_in "Modified", with: @task.modified
-    fill_in "Tags", with: @task.tags_id
+    fill_in "Tag", with: @task.tag_id
     fill_in "Title", with: @task.title
     fill_in "User", with: @task.user_id
     click_on "Update Task"

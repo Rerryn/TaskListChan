@@ -2,16 +2,16 @@
 
 one:
   title: MyString
-  creation: 2019-12-21 12:19:44
-  modified: 2019-12-21 12:19:44
+  creation: 2019-12-21 12:23:45
+  modified: 2019-12-21 12:23:45
   user: one
-  tags: one
+  tag: one
   category: one
 
 two:
   title: MyString
-  creation: 2019-12-21 12:19:44
-  modified: 2019-12-21 12:19:44
+  creation: 2019-12-21 12:23:45
+  modified: 2019-12-21 12:23:45
   user: two
-  tags: two
+  tag: two
   category: two
