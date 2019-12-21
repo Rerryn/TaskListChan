@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :tasks
   resources :categories
   resources :tags
-  resources :tasks
+  devise_for :users
   root to: "tasks#index"
   
   # Was redirect('/tasks')

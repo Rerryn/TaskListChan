@@ -14,13 +14,12 @@ class TasksTest < ApplicationSystemTestCase
     visit tasks_url
     click_on "New Task"
 
-    fill_in "Category", with: @task.category
+    fill_in "Category", with: @task.category_id
     fill_in "Creation", with: @task.creation
-    fill_in "Deadline", with: @task.deadline
-    fill_in "Modification", with: @task.modification
-    fill_in "Note", with: @task.note
-    fill_in "Tags", with: @task.tags
+    fill_in "Modified", with: @task.modified
+    fill_in "Tags", with: @task.tags_id
     fill_in "Title", with: @task.title
+    fill_in "User", with: @task.user_id
     click_on "Create Task"
 
     assert_text "Task was successfully created"
@@ -31,13 +30,12 @@ class TasksTest < ApplicationSystemTestCase
     visit tasks_url
     click_on "Edit", match: :first
 
-    fill_in "Category", with: @task.category
+    fill_in "Category", with: @task.category_id
     fill_in "Creation", with: @task.creation
-    fill_in "Deadline", with: @task.deadline
-    fill_in "Modification", with: @task.modification
-    fill_in "Note", with: @task.note
-    fill_in "Tags", with: @task.tags
+    fill_in "Modified", with: @task.modified
+    fill_in "Tags", with: @task.tags_id
     fill_in "Title", with: @task.title
+    fill_in "User", with: @task.user_id
     click_on "Update Task"
 
     assert_text "Task was successfully updated"

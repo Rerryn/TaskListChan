@@ -6,33 +6,28 @@
 </p>
 
 <p>
-  <strong>Note:</strong>
-  <%= @task.note %>
-</p>
-
-<p>
   <strong>Creation:</strong>
   <%= @task.creation %>
 </p>
 
 <p>
-  <strong>Modification:</strong>
-  <%= @task.modification %>
+  <strong>Modified:</strong>
+  <%= @task.modified %>
 </p>
 
 <p>
-  <strong>Deadline:</strong>
-  <%= @task.deadline %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @task.category %>
+  <strong>User:</strong>
+  <%= @task.user_id %>
 </p>
 
 <p>
   <strong>Tags:</strong>
-  <%= @task.tags %>
+  <%= @task.tags_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category_id %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
